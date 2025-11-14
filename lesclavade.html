@@ -3,9 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="lesclavage.css">
+    <title>L'esclavage | Oubaid Haji</title>
 </head>
 <body>
-    <h1>Hi to esclavade</h1>
+    <div class="container">
+        <button id="back-to-home">Back to Home</button>
+        <div class="paragraph">
+            <h3>L'esclavage</h3>
+            <p>
+                L’esclavage est un système de domination et d’exploitation dans lequel des individus sont privés de leur liberté, de leurs droits fondamentaux et de leur personnalité juridique, les réduisant au statut de biens ou de propriété appartenant à d’autres. 
+                Ce crime, 
+                reconnu comme une violation grave des droits de l’homme, repose sur des pratiques coercitives, telles que la contrainte physique, psychologique ou économique, pour maintenir une soumission totale. 
+                L’esclavage se manifeste sous diverses formes, notamment le travail forcé[1], l’esclavage sexuel, 
+                la servitude pour dettes, ou encore la traite des êtres humains[2].
+                Condamné par les conventions internationales, il représente l’une des atteintes les plus graves à la dignité et à l’égalité humaine, perpétuant des injustices historiques et contemporaines à travers le monde
+                puni par des années d'emprisonnement.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        const backHome = document.getElementById("back-to-home");
+
+        backHome.addEventListener("click", () => {
+            window.open("./index.html", "_blank");
+        });
+    </script>
 </body>
 </html>
