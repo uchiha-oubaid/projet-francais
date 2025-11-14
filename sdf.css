@@ -1,0 +1,104 @@
+/*hammmami*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;;
+}
+
+body {
+    background-color: #1C1C1C;
+}
+
+#back-to-home {
+    cursor: pointer;
+    position: relative;
+    margin: 30px;
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 10px;
+    border-radius: 7px;
+    overflow: hidden;
+    box-shadow: 0 0 0 1px #fff;
+}
+
+#back-to-home:hover {
+    color: #1C1C1C;
+}
+
+#back-to-home::before {
+    z-index: -1;
+    content: "";
+    width: 0;
+    height: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.2s ease;
+}
+
+#back-to-home:hover::before {
+    width: 100%;
+}
+
+#title {
+    cursor: pointer;
+    transition: 0.2s ease;
+    margin-bottom: 20px;
+}
+
+#title:hover {
+    color: red;
+}
+
+.paragraphs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.paragraph {
+    font-size: 20px;
+    font-weight: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    border: 1px solid #fff;
+    box-shadow: 0 0 0 1px #fff;
+    margin-top: 150px;
+    width: fit-content;
+    height: fit-content;
+    padding: 20px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 20%;
+    left: 50%;
+    border-radius: 5px;
+}
+
+.two {
+    transform: translate(-50%, 270px);
+}
+
+p {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#end {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-top: 10px;
+}
+
+.three {
+    transform: translate(-50%, 800px);
+}
+
+.esclavage {
+    transform: translate(1000px);
+}
