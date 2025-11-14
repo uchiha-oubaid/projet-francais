@@ -98,3 +98,40 @@ p {
 .three {
     transform: translate(-50%, 800px);
 }
+
+#sdf {
+    cursor: pointer;
+    position: relative;
+    margin: 30px;
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 10px;
+    border-radius: 7px;
+    overflow: hidden;
+    box-shadow: 0 0 0 1px #fff;
+}
+
+#sdf:hover {
+    color: #1C1C1C;
+}
+
+#sdf::before {
+    z-index: -1;
+    content: "";
+    width: 0;
+    height: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.2s ease;
+}
+
+#sdf:hover::before {
+    width: 100%;
+}
+
+.sdf {
+    transform: translate(1000px);
+}

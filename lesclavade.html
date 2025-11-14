@@ -8,7 +8,8 @@
 </head>
 <body>
     <div class="container">
-        <button id="back-to-home">Back to Home</button>
+        <button id="back-to-home">Retourner vers Home</button>
+        <button id="sdf" class="sdf">Aller vers SDF</button>
         <div class="paragraphs">
             <div class="paragraph one">
                 <h3 id="title">L'esclavage</h3>
@@ -54,9 +55,14 @@
 
     <script>
         const backHome = document.getElementById("back-to-home");
+        const goSdf = document.getElementById("sdf");
 
         backHome.addEventListener("click", () => {
             window.open("./index.html", "_blank");
+        });
+
+        goSdf.addEventListener("click", () => {
+            window.open("./sdf.html", "_blank");
         });
     </script>
 </body>
