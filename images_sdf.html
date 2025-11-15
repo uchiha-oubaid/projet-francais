@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDF | Images</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #1C1C1C;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: fit-content;
+            height: fit-content;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+        }
+
+        .image {
+            margin-bottom: 20px;
+            width: 700px;
+            height: 500px;
+        }
+
+        .btns {
+            display: flex;
+            justify-content: space-between;
+            width: 700px;
+            height: fit-content;
+        }
+
+        .esclavage {
+            cursor: pointer;
+            position: relative;
+            margin: 30px;
+            background-color: transparent;
+            border: 1px solid #fff;
+            color: #fff;
+            padding: 10px;
+            border-radius: 7px;
+            overflow: hidden;
+            box-shadow: 0 0 0 1px #fff;
+        }
+
+        .esclavage:hover {
+            color: #1C1C1C;
+        }
+
+        .esclavage::before {
+            z-index: -1;
+            content: "";
+            width: 0;
+            height: 100%;
+            background-color: #fff;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: 0.2s ease;
+        }
+
+        .esclavage:hover::before {
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img id="image_1" class="image" src="./images/1.png">
+        <div class="btns">
+            <button class="esclavage" id="prev">Prev</button>
+            <button class="esclavage" id="apres">Aprés</button>
+        </div>
+    </div>
+
+    <script>
+        const image = document.getElementById("image_1");
+        const apres = document.getElementById("apres");
+        const prev = document.getElementById("prev");
+
+        let index = 3;
+
+        apres.addEventListener("click", () => {
+            index += 1;
+            if (index <= 6) {
+                image.setAttribute('ssrc', `./images/${index}.jpg`);
+                console.log(index);
+            }
+        });
+
+    </script>
+</body>
+</html>

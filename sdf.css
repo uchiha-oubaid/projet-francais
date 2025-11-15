@@ -77,6 +77,39 @@ body {
     width: 100%;
 }
 
+#images {
+    cursor: pointer;
+    position: relative;
+    margin: 30px;
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 10px;
+    border-radius: 7px;
+    overflow: hidden;
+    box-shadow: 0 0 0 1px #fff;
+}
+
+#images:hover {
+    color: #1C1C1C;
+}
+
+#images::before {
+    z-index: -1;
+    content: "";
+    width: 0;
+    height: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.2s ease;
+}
+
+#images:hover::before {
+    width: 100%;
+}
+
 #title {
     cursor: pointer;
     transition: 0.2s ease;
@@ -134,6 +167,10 @@ p {
 
 .esclavage {
     transform: translate(920px);
+}
+
+.esclavages {
+    transform: translate(700px, 70px);
 }
 
 #solutions {
